@@ -3,7 +3,7 @@
 Pajuna is an opiniated workflow that allows you to use Ansible to configure your workstation.  
 This workflow should give you flexibilty and simply get out of your way.
 
-`mystation` is a template repositopry to get you started with using the Pajuna Ansible modules.
+`mystation` is a template repository to get you started with using the Pajuna Ansible modules.
 
 Clone this repo and customize at will.
 
