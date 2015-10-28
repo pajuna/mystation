@@ -9,7 +9,7 @@ Clone this repo and customize at will.
 
 ## Actions
 
-* [Fork](https://github.com/pajuna/mystation#fork-destination-box) https://github.com/pajuna/mystation
+* [Fork https://github.com/pajuna/mystation](https://github.com/pajuna/mystation#fork-destination-box)
 * git clone yourgithub:mystation ~/.ansible
 * `cd ~/.ansible`
 * `./script/bootstrap`
