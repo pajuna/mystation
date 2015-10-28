@@ -5,8 +5,6 @@ This workflow should give you flexibilty and simply get out of your way.
 
 `mystation` is a template repository to get you started with using the Pajuna Ansible modules.
 
-Clone this repo and customize at will.
-
 ## Actions
 
 * [Fork https://github.com/pajuna/mystation](https://github.com/pajuna/mystation/fork)
