@@ -19,8 +19,8 @@ else
   fi
 
   mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
-  echo -e "\033[0;32m Cloning git@github.com:pajuna/Ubuntu-LTS.git to ~/.pajuna/upstream .......\033[0m"
-  git clone git@github.com:pajuna/Ubuntu-LTS.git ~/.pajuna/upstream
+  echo -e "\033[0;32m Cloning https://github.com/pajuna/Ubuntu-LTS.git to ~/.pajuna/upstream .......\033[0m"
+  git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream
 fi
 
 
