@@ -1,9 +1,16 @@
 # Pajuna - mystation
 
-Pajuna is an opiniated workflow that allows you to use Ansible to configure your workstation.  
+Pajuna is an opinionated workflow that allows you to use Ansible to configure your workstation.  
 This workflow should give you flexibilty and simply get out of your way.
 
 `mystation` is a template repository to get you started with using the Pajuna Ansible modules.
+
+## Assumptions
+
+* You have a dropbox account
+* There is a separate git repository for your dotfiles
+* There is a separate git repository for your vim configuration files
+* You are running Ubuntu LTS 14.04 (Trusty)
 
 ## Actions
 
@@ -22,7 +29,6 @@ Ansible will look for roles in the following places, in order:
 * ~/.pajuna/upstream
 
 If you want to make a change to a role in https://github.com/pajuna/Ubuntu-LTS then fork it, clone into ~/.pajuna/myfork and hack in a branch and submit a PR to upstream.
-
 
 <table>
   <tr>
