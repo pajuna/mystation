@@ -1,5 +1,7 @@
 # Pajuna - mystation
 
+*WIP - not ready yet* 
+
 Pajuna is an opinionated workflow that allows you to use Ansible to configure your workstation.  
 This workflow should give you flexibilty and simply get out of your way.
 
