@@ -1,0 +1,6 @@
+---
+
+dotfiles_repo: git@bitbucket.org:aussielunix/dotfiles.git
+dotfiles_dir: "{{ lookup('env','HOME') }}/.dotfiles"
+dotfiles_files:
+  - .gitconfig
