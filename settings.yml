@@ -1,6 +1,9 @@
 ---
 
-dotfiles_repo: git@bitbucket.org:aussielunix/dotfiles.git
-dotfiles_dir: "{{ lookup('env','HOME') }}/.dotfiles"
+dotfiles_repo: "git@bitbucket.org:aussielunix/dotfiles.git"
+dotfiles_repo_local_destination: "~/src/bitbucket.org/aussielunix/dotfiles"
+dotfiles_home: "~"
 dotfiles_files:
+  - .bash_profile
   - .gitconfig
+  - .alias
