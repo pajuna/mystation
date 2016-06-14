@@ -13,4 +13,5 @@
         - ~/pkg
         - ~/tmp
   roles:
-    - geerlingguy.dotfiles
+    - pajuna.dotfiles
+    - pajuna.vim

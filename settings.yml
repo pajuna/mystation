@@ -1,5 +1,8 @@
 ---
 
+vimrc_repo: "git@bitbucket.org:aussielunix/vimrc.git"
+vimrc_repo_local_destination: "~/src/bitbucket/aussielunix/vimrc"
+
 dotfiles_repo: "git@bitbucket.org:aussielunix/dotfiles.git"
 dotfiles_repo_local_destination: "~/src/bitbucket.org/aussielunix/dotfiles"
 dotfiles_home: "~"
