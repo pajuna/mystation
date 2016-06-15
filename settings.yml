@@ -1,5 +1,26 @@
 ---
 
+homebrew_installed_packages:
+  - bash-completion
+  - gpg
+  - httpie
+  - rbenv
+  - rbenv-binstubs
+  - rbenv-default-gems
+  - ruby-build
+  - ssh-copy-id
+  - wget
+
+homebrew_cask_apps:
+  - dropbox
+  - firefox
+  - google-chrome
+  - slack
+  - vagrant
+  - vagrant-manager
+  - virtualbox
+  - vlc
+
 vimrc_repo: "git@bitbucket.org:aussielunix/vimrc.git"
 vimrc_repo_local_destination: "~/src/bitbucket/aussielunix/vimrc"
 
