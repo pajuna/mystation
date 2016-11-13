@@ -1,2 +1,0 @@
-pajuna.dotfiles
-pajuna.vim

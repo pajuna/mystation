@@ -15,8 +15,12 @@ else
 
   if ! hash ansible 2>/dev/null
   then
-    echo -e "\033[0;32m Installing ansible deps with pip.......\033[0m"
-    sudo pip install -q -r requirements.txt
+    echo -e "\033[0;32m Adding the Ansible PPA.......\033[0m"
+    sudo apt-get install software-properties-common
+    sudo apt-add-repository ppa:ansible/ansible
+    sudo apt-get update
+    echo -e "\033[0;32m installing Ansible from PPA.......\033[0m"
+    sudo apt-get install ansible
   fi
 
   mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
