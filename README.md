@@ -15,29 +15,18 @@ Makes use of [Ansible](https://github.com/ansible/ansible/) and the  [Pajuna](ht
 
 The following directories are used
 
-* `~/.ansible`
-* `~/.ansible/roles`
-* `~/.pajuna`
-* `~/.pajuna/myfork`
-* `~/.pajuna/upstream`
-* `~/.dotfiles`
-* `~/.vim`
-
-<br />
-<br />
-<br />
-* ~/.ansible
+* **~/.ansible**
     * This is a clone of YOUR version of [pajuna/mystation](https://github.com/pajuna/mystation)
-- ~/.pajuna/myfork
+- **~/.pajuna/myfork**
     * Your FORK of [pajuna/Ubuntu-LTS](https://github.com/pajuna/Ubuntu-LTS)
     * This IS to be edited by you)
     * Send PR's from this to upstream
-* ~/.pajuna/upstream
+* **~/.pajuna/upstream**
     * Upstream clone of [pajuna/Ubuntu-LTS](https://github.com/pajuna/Ubuntu-LTS)
     * This is not to be edited by you)
-* ~/.dotfiles
+* **~/.dotfiles**
     * Self explanitory but the Pajuna roles all assume your dotfiles is a git directory
-* ~/.vim
+* **~/.vim**
     * Self explanitory but the Pajuna roles assume your .vim directory is a git directory
 
 Ansible will look for roles in the following places, in order:
