@@ -47,7 +47,6 @@ If you want to make a change to a role in the Pajuna [Ubuntu LTS](https://github
 
 ~/.ansible/roles is where you can put private roles that do not belong in the public Pajuna [Ubuntu LTS](https://github.com/pajuna/Ubuntu-LTS) repo.
 
-
 ## Getting Started
 
 With a clean fresh minimal install of Ubuntu LTS the following is all you need to get up and running with Pajuna/Ansible.
