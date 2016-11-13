@@ -9,18 +9,17 @@ else
   if ! hash pip 2>/dev/null
   then
     echo -e "\033[0;32m Installing python and python-pip.......\033[0m"
-    sudo apt-get update -yqq
-    sudo apt-get install -yqq git python python-pip python-dev
+    sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq update
+	  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install python python-pip python-dev < /dev/null > /dev/null
   fi
 
   if ! hash ansible 2>/dev/null
   then
     echo -e "\033[0;32m Adding the Ansible PPA.......\033[0m"
-    sudo apt-get install software-properties-common
-    sudo apt-add-repository ppa:ansible/ansible
-    sudo apt-get update -yqq
+    sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install software-properties-common < /dev/null > /dev/null
+    sudo apt-add-repository -yu ppa:ansible/ansible
     echo -e "\033[0;32m installing Ansible from PPA.......\033[0m"
-    sudo apt-get install ansible -yqq
+    sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install ansible < /dev/null > /dev/null
   fi
 
   mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
