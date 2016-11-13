@@ -9,6 +9,7 @@ else
   if ! hash pip 2>/dev/null
   then
     echo -e "\033[0;32m Installing python and python-pip.......\033[0m"
+    sudo apt-get update -yqq
     sudo apt-get install -yqq git python python-pip python-dev
   fi
 
