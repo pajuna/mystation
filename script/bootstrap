@@ -18,9 +18,9 @@ else
     echo -e "\033[0;32m Adding the Ansible PPA.......\033[0m"
     sudo apt-get install software-properties-common
     sudo apt-add-repository ppa:ansible/ansible
-    sudo apt-get update
+    sudo apt-get update -yqq
     echo -e "\033[0;32m installing Ansible from PPA.......\033[0m"
-    sudo apt-get install ansible
+    sudo apt-get install ansible -yqq
   fi
 
   mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
