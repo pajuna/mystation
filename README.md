@@ -15,14 +15,17 @@ Makes use of [Ansible](https://github.com/ansible/ansible/) and the  [Pajuna](ht
 
 The following directories are used
 
-* ~/.ansible
-* ~/.ansible/roles
-* ~/.pajuna
-* ~/.pajuna/myfork
-* ~/.pajuna/upstream
-* ~/.dotfiles
-* ~/.vim
+* `~/.ansible`
+* `~/.ansible/roles`
+* `~/.pajuna`
+* `~/.pajuna/myfork`
+* `~/.pajuna/upstream`
+* `~/.dotfiles`
+* `~/.vim`
 
+<br />
+<br />
+<br />
 * ~/.ansible
     * This is a clone of YOUR version of [pajuna/mystation](https://github.com/pajuna/mystation)
 - ~/.pajuna/myfork
