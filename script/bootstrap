@@ -29,8 +29,7 @@ else
 fi
 
 
-echo "alias pajuna='ansible-playbook -i hosts playbook.yml -K'" >> ~/.bashrc
-
+alias pajuna='ANSIBLE_CONFIG=~/.ansible/ansible.cfg ansible-playbook -i ~/.ansible/inventory ~/.ansible/playbook.yml'
 
 # echo out welcome message etc
 echo
