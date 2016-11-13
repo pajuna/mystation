@@ -3,9 +3,9 @@
 ---
 
 user: pajuna
-vimrc_repo: "git@github.com:pajuna/vimrc.git"
+vimrc_repo: "https://github.com/pajuna/vimrc.git"
 
-dotfiles_repo: git@github.com:pajuna/dotfiles.git
+dotfiles_repo: "https://github.com/pajuna/dotfiles.git"
 dotfiles_files:
   - .bash_alias
   - .profile
