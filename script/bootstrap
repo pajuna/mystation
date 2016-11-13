@@ -1,0 +1,33 @@
+#!/bin/bash
+# vim: autoindent tabstop=2 shiftwidth=2 expandtab softtabstop=2 filetype=sh
+
+if [[ -d ~/.pajuna/upstream && ! -L ~/.pajuna/upstream ]]
+then
+  echo -e "\033[0;32mThe folder ".pajuna/upstream" already exists. Aborting.\033[0m"
+  exit 1
+else
+  if ! hash pip 2>/dev/null
+  then
+    echo -e "\033[0;32m Installing python and python-pip.......\033[0m"
+    sudo apt-get install -yqq git python python-pip python-dev
+  fi
+
+  if ! hash ansible 2>/dev/null
+  then
+    echo -e "\033[0;32m Installing ansible deps with pip.......\033[0m"
+    sudo pip install -q -r requirements.txt
+  fi
+
+  mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
+  echo -e "\033[0;32m Cloning https://github.com/pajuna/Ubuntu-LTS.git to ~/.pajuna/upstream .......\033[0m"
+  git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream
+fi
+
+
+echo "alias pajuna='ansible-playbook -i hosts playbook.yml -K'" >> ~/.bashrc
+
+
+# echo out welcome message etc
+echo
+echo -e "\033[0;36mBootstrap is complete....\033[0m"
+exit 0

@@ -1,34 +1,22 @@
+# my workstation specific settings.
+
 ---
 
-homebrew_installed_packages:
-  - bash-completion
-  - gpg
-  - httpie
-  - rbenv
-  - rbenv-binstubs
-  - rbenv-default-gems
-  - ruby-build
-  - ssh-copy-id
-  - wget
+user: pajuna
+vimrc_repo: "git@github.com:pajuna/vimrc.git"
 
-homebrew_cask_apps:
-  - dropbox
-  - firefox
-  - google-chrome
-  - slack
-  - vagrant
-  - vagrant-manager
-  - virtualbox
-  - vlc
-
-vimrc_repo: "git@bitbucket.org:aussielunix/vimrc.git"
-vimrc_repo_local_destination: "~/src/bitbucket/aussielunix/vimrc"
-
-dotfiles_repo: "git@bitbucket.org:aussielunix/dotfiles.git"
-dotfiles_repo_local_destination: "~/src/bitbucket.org/aussielunix/dotfiles"
-dotfiles_home: "~"
+dotfiles_repo: git@github.com:pajuna/dotfiles.git
 dotfiles_files:
-  - .bash_profile
+  - .bash_alias
+  - .profile
   - .bashrc
-  - .gitconfig
-  - .alias
+  - .profile.d
+  - .bash_logout
+
+rbenv_ruby_versions:
+  - 2.2.3
+rbenv_default_ruby_version: 2.2.3
+
+misc_packages:
+  - curl
+  - git
