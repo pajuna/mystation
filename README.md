@@ -25,9 +25,9 @@ The following directories are used
     * Upstream clone of [pajuna/Ubuntu-LTS](https://github.com/pajuna/Ubuntu-LTS)
     * This is not to be edited by you)
 * **~/.dotfiles**
-    * Self explanitory but the Pajuna roles all assume your dotfiles is a git directory
+    * Self explanitory but the Pajuna roles all assume your dotfiles is a [git directory](https://github.com/pajuna/dotfiles)
 * **~/.vim**
-    * Self explanitory but the Pajuna roles assume your .vim directory is a git directory
+    * Self explanitory but the Pajuna roles assume your .vim directory is a [git directory](https://github.com/pajuna/vimrc)
 
 Ansible will look for roles in the following places, in order:
 
