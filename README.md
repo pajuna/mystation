@@ -46,9 +46,9 @@ With a clean fresh minimal install of Ubuntu LTS the following is all you need t
 * `git clone https://github.com/pajuna/mystation.git ~/.ansible`
 * `cd ~/.ansible`
 * `./script/bootstrap`
-    * checks for python
-    * prompts to install python and deps with apt
-    * `pip install -r requirements.txt`
+    * installs python and deps with apt
+    * adds the Ansible PPA
+    * installs Ansible from PPA
     * `git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream`
 * Edit playbook.yml and add some roles
 * Edit settings.yml and add a bunch of info.
