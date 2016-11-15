@@ -4,6 +4,12 @@ My Ubuntu LTS workstation management Ansible playbook.
 
 Makes use of [Ansible](https://github.com/ansible/ansible/) and the  [Pajuna](https://github.com/pajuna/Ubuntu-LTS) Ansible roles.
 
+
+## What is Pajuna
+
+A collection of Ansible based repos for lowering the time it takes to be productive again when you are starting with a new Ubuntu LTS Workstation.
+This includes remastering the Ubuntu installer iso through to installing and managing development tools, dotfiles and more.
+
 ## The goals of this project
 
 * lower the time it takes to be productive again when you are starting with a new workstation
