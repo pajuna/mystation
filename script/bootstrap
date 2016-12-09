@@ -28,7 +28,7 @@ else
 fi
 
 
-alias pajuna='ANSIBLE_CONFIG=~/.ansible/ansible.cfg ansible-playbook -i ~/.ansible/inventory ~/.ansible/playbook.yml'
+alias pajuna='ANSIBLE_CONFIG=~/.ansible/ansible.cfg ansible-playbook -i ~/.ansible/inventory ~/.ansible/playbook.yml -K'
 
 # echo out welcome message etc
 echo
