@@ -10,7 +10,7 @@ else
   then
     echo -e "\033[0;32m Installing python and python-pip.......\033[0m"
     sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq update
-	  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install python python-pip python-dev < /dev/null > /dev/null
+    sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install python python-pip python-dev < /dev/null > /dev/null
   fi
 
   if ! hash ansible 2>/dev/null
