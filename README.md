@@ -4,6 +4,19 @@ My Ubuntu LTS workstation management Ansible playbook.
 
 Makes use of [Ansible](https://github.com/ansible/ansible/) and the  [Pajuna](https://github.com/pajuna/Ubuntu-LTS) Ansible roles.
 
+## TL;DR
+
+```bash
+curl https://raw.githubusercontent.com/pajuna/mystation/master/script/bootstrap | bash
+```
+OR
+
+```bash
+curl -L https://git.io/pajuna-demo | bash
+```
+
+* Edit playbook.yml and add some roles
+* Edit settings.yml and add a bunch of info.
 
 ## What is Pajuna
 
@@ -47,15 +60,18 @@ If you want to make a change to a role in the Pajuna [Ubuntu LTS](https://github
 
 ## Getting Started
 
-With a clean fresh minimal install of Ubuntu LTS the following is all you need to get up and running with Pajuna/Ansible.
+With a clean fresh minimal install of Ubuntu LTS the following bootstrap script is all you need to get up and running with Pajuna.
 
-* `git clone https://github.com/pajuna/mystation.git ~/.ansible`
-* `cd ~/.ansible`
-* `./script/bootstrap`
-    * installs python and deps with apt
-    * adds the Ansible PPA
-    * installs Ansible from PPA
-    * `git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream`
+```bash
+curl -L https://git.io/pajuna-demo | bash
+```
+This bootstrap script will:
+	* install python and deps with apt
+	* add the Ansible PPA
+	* install Ansible from PPA
+  * `git clone https://github.com/pajuna/mystation.git ~/.ansible`
+  * `git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream`
+
 * Edit playbook.yml and add some roles
 * Edit settings.yml and add a bunch of info.
 
