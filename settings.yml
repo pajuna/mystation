@@ -2,7 +2,7 @@
 
 ---
 
-user: pajuna
+user: ubuntu
 vimrc_repo: "https://github.com/pajuna/vimrc.git"
 
 dotfiles_repo: "https://github.com/pajuna/dotfiles.git"

@@ -21,4 +21,5 @@
   roles:
     - dotfiles  # Must be first
     - misc      # generic role / dumping ground
-    - vim
+    - rbenv     # install rbenv and ruby
+    - vim       # vim + vim dotfiles
