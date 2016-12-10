@@ -1,39 +1,45 @@
 #!/usr/bin/env bash
 
+if [[ -d ~/.ansible ]]
+then
+  echo -e "\e[32mThe folder \".ansible\" already exists. Aborting.\e[0m"
+  exit 1
+fi
+
 if [[ -d ~/.pajuna/upstream && ! -L ~/.pajuna/upstream ]]
 then
   echo -e "\e[32mThe folder ".pajuna/upstream" already exists. Aborting.\e[0m"
   exit 1
-else
-  if ! hash pip 2>/dev/null
-  then
-    echo -e "\e[32m Installing python and python-pip.......\e[0m"
-    sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq update
-    sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install python python-pip python-dev < /dev/null > /dev/null
-  fi
-
-  if ! hash git 2>/dev/null
-  then
-    echo -e "\e[32m Installing git.......\e[0m"
-    sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install git < /dev/null > /dev/null
-  fi
-
-  if ! hash ansible 2>/dev/null
-  then
-    echo -e "\e[32m Adding the Ansible PPA.......\e[0m"
-    sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install software-properties-common < /dev/null > /dev/null
-    sudo apt-add-repository -yu ppa:ansible/ansible
-    echo -e "\e[32m installing Ansible from PPA.......\e[0m"
-    sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install ansible < /dev/null > /dev/null
-  fi
-
-  echo -e "\e[32m Cloning https://github.com/pajuna/mystation.git to ~/.ansible .......\e[0m"
-  git clone https://github.com/pajuna/mystation.git ~/.ansible
-
-  mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
-  echo -e "\e[32m Cloning https://github.com/pajuna/Ubuntu-LTS.git to ~/.pajuna/upstream .......\e[0m"
-  git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream
 fi
+
+if ! hash pip 2>/dev/null
+then
+  echo -e "\e[32m Installing python and python-pip.......\e[0m"
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq update
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install python python-pip python-dev < /dev/null > /dev/null
+fi
+
+if ! hash git 2>/dev/null
+then
+  echo -e "\e[32m Installing git.......\e[0m"
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install git < /dev/null > /dev/null
+fi
+
+if ! hash ansible 2>/dev/null
+then
+  echo -e "\e[32m Adding the Ansible PPA.......\e[0m"
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install software-properties-common < /dev/null > /dev/null
+  sudo apt-add-repository -yu ppa:ansible/ansible > /dev/null 2>&1
+  echo -e "\e[32m installing Ansible from PPA.......\e[0m"
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install ansible < /dev/null > /dev/null
+fi
+
+echo -e "\e[32m Cloning https://github.com/pajuna/mystation.git to ~/.ansible .......\e[0m"
+git clone --quiet https://github.com/pajuna/mystation.git ~/.ansible
+
+mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
+echo -e "\e[32m Cloning https://github.com/pajuna/Ubuntu-LTS.git to ~/.pajuna/upstream .......\e[0m"
+git clone --quiet https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream
 
 # echo out welcome message etc
 echo
@@ -43,3 +49,4 @@ echo -e "\e[92malias pajuna='ANSIBLE_CONFIG=~/.ansible/ansible.cfg ansible-playb
 echo
 
 # vim: autoindent tabstop=2 shiftwidth=2 expandtab softtabstop=2 filetype=sh
+
