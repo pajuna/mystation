@@ -24,22 +24,22 @@ if ! hash pip 2>/dev/null
 then
   echo -e "\e[32mInstalling python and python-pip.......\e[0m"
   sudo -E DEBIAN_FRONTEND=noninteractive apt-get update >> /tmp/pajuna-bootstrap.log 2>&1
-  sudo -E DEBIAN_FRONTEND=noninteractive apt-get install python python-pip python-dev  >> /tmp/pajuna-bootstrap.log 2>&1
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -y install python python-pip python-dev  >> /tmp/pajuna-bootstrap.log 2>&1
 fi
 
 if ! hash git 2>/dev/null
 then
   echo -e "\e[32mInstalling git.......\e[0m"
-  sudo -E DEBIAN_FRONTEND=noninteractive apt-get install git >> /tmp/pajuna-bootstrap.log 2>&1
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -y install git >> /tmp/pajuna-bootstrap.log 2>&1
 fi
 
 if ! hash ansible 2>/dev/null
 then
   echo -e "\e[32mAdding the Ansible PPA.......\e[0m"
-  sudo -E DEBIAN_FRONTEND=noninteractive apt-get install software-properties-common >> /tmp/pajuna-bootstrap.log 2>&1
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common >> /tmp/pajuna-bootstrap.log 2>&1
   sudo apt-add-repository -yu ppa:ansible/ansible >> /tmp/pajuna-bootstrap.log 2>&1
   echo -e "\e[32mInstalling Ansible from PPA.......\e[0m"
-  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install ansible >> /tmp/pajuna-bootstrap.log 2>&1
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -y install ansible >> /tmp/pajuna-bootstrap.log 2>&1
 fi
 
 echo -e "\e[32mCloning https://github.com/pajuna/mystation.git to ~/.ansible .......\e[0m"
