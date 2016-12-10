@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 cat <<End-of-message
 ░█▀█░█▀█░▀▀█░█░█░█▀█░█▀█
 ░█▀▀░█▀█░░░█░█░█░█░█░█▀█
@@ -23,32 +22,32 @@ fi
 
 if ! hash pip 2>/dev/null
 then
-  echo -e "\e[32m Installing python and python-pip.......\e[0m"
-  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq update
-  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install python python-pip python-dev < /dev/null > /dev/null
+  echo -e "\e[32mInstalling python and python-pip.......\e[0m"
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get update >> /tmp/pajuna-bootstrap.log 2>&1
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get install python python-pip python-dev  >> /tmp/pajuna-bootstrap.log 2>&1
 fi
 
 if ! hash git 2>/dev/null
 then
-  echo -e "\e[32m Installing git.......\e[0m"
-  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install git < /dev/null > /dev/null
+  echo -e "\e[32mInstalling git.......\e[0m"
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get install git >> /tmp/pajuna-bootstrap.log 2>&1
 fi
 
 if ! hash ansible 2>/dev/null
 then
-  echo -e "\e[32m Adding the Ansible PPA.......\e[0m"
-  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install software-properties-common < /dev/null > /dev/null
-  sudo apt-add-repository -yu ppa:ansible/ansible > /dev/null 2>&1
-  echo -e "\e[32m installing Ansible from PPA.......\e[0m"
-  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install ansible < /dev/null > /dev/null
+  echo -e "\e[32mAdding the Ansible PPA.......\e[0m"
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get install software-properties-common >> /tmp/pajuna-bootstrap.log 2>&1
+  sudo apt-add-repository -yu ppa:ansible/ansible >> /tmp/pajuna-bootstrap.log 2>&1
+  echo -e "\e[32mInstalling Ansible from PPA.......\e[0m"
+  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -qq install ansible >> /tmp/pajuna-bootstrap.log 2>&1
 fi
 
-echo -e "\e[32m Cloning https://github.com/pajuna/mystation.git to ~/.ansible .......\e[0m"
-git clone --quiet https://github.com/pajuna/mystation.git ~/.ansible
+echo -e "\e[32mCloning https://github.com/pajuna/mystation.git to ~/.ansible .......\e[0m"
+git clone https://github.com/pajuna/mystation.git ~/.ansible >> /tmp/pajuna-bootstrap.log 2>&1
 
 mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
-echo -e "\e[32m Cloning https://github.com/pajuna/Ubuntu-LTS.git to ~/.pajuna/upstream .......\e[0m"
-git clone --quiet https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream
+echo -e "\e[32mCloning https://github.com/pajuna/Ubuntu-LTS.git to ~/.pajuna/upstream .......\e[0m"
+git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream >> /tmp/pajuna-bootstrap.log 2>&1
 
 # echo out welcome message etc
 echo
@@ -56,6 +55,6 @@ echo -e "\e[36mBootstrap is complete....\e[0m"
 echo -e "\e[36mYou should set an alias up for pajuna....\e[0m]"
 echo -e "\e[92malias pajuna='ANSIBLE_CONFIG=~/.ansible/ansible.cfg ansible-playbook -i ~/.ansible/inventory ~/.ansible/playbook.yml' \e[0m"
 echo
+echo -e "\nBootstrap is complete....\n" >> /tmp/pajuna-bootstrap.log 2>&1
 
 # vim: autoindent tabstop=2 shiftwidth=2 expandtab softtabstop=2 filetype=sh
-
