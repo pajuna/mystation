@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+
+cat <<End-of-message
+░█▀█░█▀█░▀▀█░█░█░█▀█░█▀█
+░█▀▀░█▀█░░░█░█░█░█░█░█▀█
+░▀░░░▀░▀░▀▀░░▀▀▀░▀░▀░▀░▀
+by Mick Pollard <twitter.com/aussielunix>
+
+End-of-message
+
 if [[ -d ~/.ansible ]]
 then
   echo -e "\e[32mThe folder \".ansible\" already exists. Aborting.\e[0m"
