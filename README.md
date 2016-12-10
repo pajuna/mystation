@@ -17,6 +17,10 @@ curl -L https://git.io/pajuna-demo | bash
 
 * Edit playbook.yml and add some roles
 * Edit settings.yml and add a bunch of info.
+* run `pajuna`
+```bash
+$ pajuna
+```
 
 ## What is Pajuna
 
@@ -74,6 +78,10 @@ This bootstrap script will:
 
 * Edit playbook.yml and add some roles
 * Edit settings.yml and add a bunch of info.
+* run `pajuna`
+```bash
+$ pajuna
+```
 
 Each role that exposes any settings should have both a `defaults/main.yml` and a README.md with some info about what you need in your settings.yml
 <br />
