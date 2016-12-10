@@ -7,7 +7,7 @@ Makes use of [Ansible](https://github.com/ansible/ansible/) and the  [Pajuna](ht
 ## TL;DR
 
 `curl https://raw.githubusercontent.com/pajuna/mystation/master/script/bootstrap | bash` **OR**  
-`curl -L https://git.io/pajuna-demo | bash`
+`curl -Ls https://git.io/pajuna-demo | bash`
 
 * Edit playbook.yml and add some roles
 * Edit settings.yml and add a bunch of info.
