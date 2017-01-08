@@ -69,9 +69,9 @@ curl -L https://git.io/pajuna-demo | bash
 ```
 This bootstrap script will:
   > add the Ansible PPA  
-	> install Ansible from PPA  
-  > `git clone https://github.com/pajuna/mystation.git ~/.ansible`  
-  > `git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream`  
+	  install Ansible from PPA  
+    `git clone https://github.com/pajuna/mystation.git ~/.ansible`  
+    `git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream`  
 
 * Edit playbook.yml and add some roles
 * Edit settings.yml and add a bunch of info.
