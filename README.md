@@ -11,6 +11,10 @@ Makes use of [Ansible](https://github.com/ansible/ansible/) and the  [Pajuna](ht
 
 * Edit playbook.yml and add some roles
 * Edit settings.yml and add a bunch of info.
+* Start an ssh-agent
+  * `eval "$(ssh-agent -s)"`
+* add your ssh key to the agent
+  * `ssh-add`
 * run `pajuna`
 ```bash
 $ pajuna
