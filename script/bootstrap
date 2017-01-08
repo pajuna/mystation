@@ -37,7 +37,7 @@ fi
 if [[ ! -d ~/.ansible ]]
 then
   echo -e "\e[32mThe folder \".ansible\" doesn't exist. Creating....\e[0m"
-  git clone ${MYSTATION_REPO} ~/.ansible
+  git clone ${MYSTATION_REPO} ~/.ansible  >> /tmp/pajuna-bootstrap.log 2>&1
 fi
 
 mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
