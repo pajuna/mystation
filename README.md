@@ -60,8 +60,6 @@ Ansible will look for roles in the following places, in order:
 
 If you want to make a change to a role in the Pajuna [Ubuntu LTS](https://github.com/pajuna/Ubuntu-LTS) repo then fork it, clone into ~/.pajuna/myfork and hack on in in a branch and submit a PR to upstream.
 
-~/.ansible/roles is where you can put private roles that do not belong in the public Pajuna [Ubuntu LTS](https://github.com/pajuna/Ubuntu-LTS) repo.
-
 ## Getting Started
 
 With a clean fresh minimal install of Ubuntu LTS the following bootstrap script is all you need to get up and running with Pajuna.
