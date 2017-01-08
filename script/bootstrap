@@ -1,30 +1,21 @@
 #!/usr/bin/env bash
 
+MYSTATION_REPO="https://github.com/pajuna/mystation.git"
+
+#######################################################################################
 cat <<End-of-message
 ░█▀█░█▀█░▀▀█░█░█░█▀█░█▀█
 ░█▀▀░█▀█░░░█░█░█░█░█░█▀█
 ░▀░░░▀░▀░▀▀░░▀▀▀░▀░▀░▀░▀
+
 by Mick Pollard <twitter.com/aussielunix>
 
 End-of-message
 
-if [[ -d ~/.ansible ]]
+if [[ -d ~/.pajuna ]]
 then
-  echo -e "\e[32mThe folder \".ansible\" already exists. Aborting.\e[0m"
+  echo -e "\e[32mThe folder \".pajuna\" already exists. Aborting.\e[0m"
   exit 1
-fi
-
-if [[ -d ~/.pajuna/upstream && ! -L ~/.pajuna/upstream ]]
-then
-  echo -e "\e[32mThe folder ".pajuna/upstream" already exists. Aborting.\e[0m"
-  exit 1
-fi
-
-if ! hash pip 2>/dev/null
-then
-  echo -e "\e[32mInstalling python and python-pip.......\e[0m"
-  sudo -E DEBIAN_FRONTEND=noninteractive apt-get update >> /tmp/pajuna-bootstrap.log 2>&1
-  sudo -E DEBIAN_FRONTEND=noninteractive apt-get -y install python python-pip python-dev  >> /tmp/pajuna-bootstrap.log 2>&1
 fi
 
 if ! hash git 2>/dev/null
@@ -42,8 +33,12 @@ then
   sudo -E DEBIAN_FRONTEND=noninteractive apt-get -y install ansible >> /tmp/pajuna-bootstrap.log 2>&1
 fi
 
-echo -e "\e[32mCloning https://github.com/pajuna/mystation.git to ~/.ansible .......\e[0m"
-git clone https://github.com/pajuna/mystation.git ~/.ansible >> /tmp/pajuna-bootstrap.log 2>&1
+# clone pajuna/mystation if ~/.ansible doesn't alredy exist
+if [[ ! -d ~/.ansible ]]
+then
+  echo -e "\e[32mThe folder \".ansible\" doesn't exist. Creating....\e[0m"
+  git clone ${MYSTATION_REPO}~/.ansible
+fi
 
 mkdir -p ~/.pajuna/upstream ~/.pajuna/myfork
 echo -e "\e[32mCloning https://github.com/pajuna/Ubuntu-LTS.git to ~/.pajuna/upstream .......\e[0m"
@@ -54,7 +49,6 @@ echo
 echo -e "\e[36mBootstrap is complete....\e[0m"
 echo -e "\e[36mYou should set an alias up for pajuna....\e[0m]"
 echo -e "\e[92malias pajuna='ANSIBLE_CONFIG=~/.ansible/ansible.cfg ansible-playbook -i ~/.ansible/inventory ~/.ansible/playbook.yml' \e[0m"
-echo
-echo -e "\nBootstrap is complete....\n" >> /tmp/pajuna-bootstrap.log 2>&1
+echo -e "\nNow run pajuna -K....\n" >> /tmp/pajuna-bootstrap.log 2>&1
 
 # vim: autoindent tabstop=2 shiftwidth=2 expandtab softtabstop=2 filetype=sh
