@@ -84,7 +84,7 @@ This bootstrap script will:
 $ pajuna -K
 ```
 
-Each role that exposes any settings should have both a `defaults/main.yml` and a README.md with some info about what you need in your settings.yml
+Each role in [pajuna/Ubuntu-LTS](https://github.com/pajuna/Ubuntu-LTS) that exposes any settings should have both a `defaults/main.yml` and a README.md with some info about what you need in your settings.yml
 <br />
 <br />
 **NOTE** You can create yourself an automated Ubuntu installer using the [Pajuna automated iso generator](https://github.com/pajuna/ubuntu-custom-iso)
