@@ -6,7 +6,6 @@ Makes use of [Ansible](https://github.com/ansible/ansible/) and the  [Pajuna](ht
 
 ## TL;DR
 
-`curl https://raw.githubusercontent.com/pajuna/mystation/master/script/bootstrap | bash` **OR**  
 `curl -Ls https://git.io/pajuna-demo | bash`
 
 * Edit playbook.yml and add some roles
@@ -15,9 +14,9 @@ Makes use of [Ansible](https://github.com/ansible/ansible/) and the  [Pajuna](ht
   * `eval "$(ssh-agent -s)"`
 * add your ssh key to the agent
   * `ssh-add`
-* run `pajuna`
+* run `pajuna -K`
 ```bash
-$ pajuna
+$ pajuna -K
 ```
 
 ## What is Pajuna
@@ -79,9 +78,9 @@ This bootstrap script will:
   * `eval "$(ssh-agent -s)"`
 * add your ssh key to the agent
   * `ssh-add`
-* run `pajuna`
+* run `pajuna -K`
 ```bash
-$ pajuna
+$ pajuna -K
 ```
 
 Each role that exposes any settings should have both a `defaults/main.yml` and a README.md with some info about what you need in your settings.yml
