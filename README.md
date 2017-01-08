@@ -6,7 +6,7 @@ Makes use of [Ansible](https://github.com/ansible/ansible/) and the  [Pajuna](ht
 
 ## TL;DR
 
-`curl -Ls https://git.io/pajuna-demo | bash`
+`curl -Ls http://pajuna.it | bash`
 
 * Edit playbook.yml and add some roles
 * Edit settings.yml and add a bunch of info.
@@ -64,7 +64,7 @@ If you want to make a change to a role in the Pajuna [Ubuntu LTS](https://github
 With a clean fresh minimal install of Ubuntu LTS the following bootstrap script is all you need to get up and running with Pajuna.
 
 ```bash
-curl -L https://git.io/pajuna-demo | bash
+curl -Ls http://pajuna.it/ | bash
 ```
 This bootstrap script will:
   > add the Ansible PPA  
