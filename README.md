@@ -37,7 +37,10 @@ The following directories are used
 
 * **~/.ansible**
     * This is a clone of YOUR version of [pajuna/mystation](https://github.com/pajuna/mystation)
-- **~/.pajuna/myfork**
+* **~/.ansible/roles**
+    * This is where private roles belong.
+    * These roles take precedence over all others.
+* **~/.pajuna/myfork**
     * Your FORK of [pajuna/Ubuntu-LTS](https://github.com/pajuna/Ubuntu-LTS)
     * This IS to be edited by you)
     * Send PR's from this to upstream
