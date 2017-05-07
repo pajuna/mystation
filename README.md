@@ -6,10 +6,9 @@ Makes use of [Ansible](https://github.com/ansible/ansible/) and the  [Pajuna](ht
 
 ## TL;DR
 
-`curl -Ls http://pajuna.it | bash`
-
-* Edit playbook.yml and add some roles
-* Edit settings.yml and add a bunch of info.
+* Run `curl -Ls http://pajuna.it | bash`
+* Edit `playbook/site.yml` and add some roles
+* Edit `playbook/settings.yml` and add a bunch of info.
 * Start an ssh-agent
   * `eval "$(ssh-agent -s)"`
 * add your ssh key to the agent
@@ -73,8 +72,8 @@ This bootstrap script will:
     `git clone https://github.com/pajuna/mystation.git ~/.ansible`  
     `git clone https://github.com/pajuna/Ubuntu-LTS.git ~/.pajuna/upstream`  
 
-* Edit playbook.yml and add some roles
-* Edit settings.yml and add a bunch of info.
+* Edit playbook/site.yml and add some roles
+* Edit playbook/settings.yml and add a bunch of info.
 * Start an ssh-agent
   * `eval "$(ssh-agent -s)"`
 * add your ssh key to the agent
