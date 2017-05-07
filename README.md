@@ -7,8 +7,8 @@ Makes use of [Ansible](https://github.com/ansible/ansible/) and the  [Pajuna](ht
 ## TL;DR
 
 * Run `curl -Ls http://pajuna.it | bash`
-* Edit `playbook/site.yml` and add some roles
-* Edit `playbook/settings.yml` and add a bunch of info.
+* Edit `~/.ansible/playbook/site.yml` and add some roles
+* Edit `~/.ansible/playbook/settings.yml` and add a bunch of info.
 * Start an ssh-agent
   * `eval "$(ssh-agent -s)"`
 * add your ssh key to the agent
