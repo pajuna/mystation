@@ -8,10 +8,11 @@ vimrc_repo: "https://github.com/pajuna/vimrc.git"
 dotfiles_repo: "https://github.com/pajuna/dotfiles.git"
 dotfiles_files:
   - .bash_alias
-  - .profile
-  - .bashrc
-  - .profile.d
   - .bash_logout
+  - .bashrc
+  - .gitconfig
+  - .profile
+  - .profile.d
 
 rbenv_ruby_versions:
   - 2.2.3
