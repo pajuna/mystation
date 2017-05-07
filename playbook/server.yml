@@ -1,0 +1,29 @@
+##
+# Ansible playbook for setting up your remote Ubuntu Environment
+#
+---
+- hosts: local
+  become: no
+
+  vars_files:
+    - settings.yml
+
+  pre_tasks:
+    - name: create /bin/src/tmp/.config dir
+      file: path="{{item}}" state=directory mode=0755
+      with_items:
+        - ~/bin
+        - ~/src
+        - ~/pkg
+        - ~/tmp
+        - ~/.config
+
+  roles:
+    - dotfiles                        # Must be first
+    - aussielunix.python
+    - capotej.packagecloud
+    - direnv
+    - mkdocs
+    - misc                            # generic role / dumping ground
+    - rbenv                           # install rbenv and ruby
+    - vim                             # vim + vim dotfiles
